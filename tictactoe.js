@@ -1,16 +1,35 @@
 var squares = 9, turn = "X", counter = 0, ceiling = 3,
     topPos = 5, leftPos = 5;
+const container = document.querySelector('.container');
 window.onload = () => {
   makeSquares();
+  container.addEventListener('click',function(e){
+    if(e.target !== e.currentTarget){
+      const clickedItemId = e.target.id;
+      const clickedItemClass = e.target.className;
+      const itemParents = e.target.parentNode.className;
+      const div = document.getElementById(clickedItemId);
+      console.log(div.childNodes[0]);
+      if(clickedItemClass === "square"){
+        if(div.textContent === ""){
+          div.textContent = "meow";
+        }
+        // if(test.textContent === null){
+        //   test.textContent = " "
+        // } else if (test.textContent != null) {
+        //   test.textContent = "meow"
+        // }
+        //clickedItemId.textContent = "meow";
+      }
+    }
+  }, false);
 }
 
 
 function makeSquares(){
   for (let i = 0; i < squares; i++){
     var div = document.createElement("div"); //i think its this line
-    var text = document.createTextNode("am i working");
-    var container = document.querySelector('.container');
-    div.id = "square" + i;
+    div.id = `square${i}`;
     div.className = "square";
     div.style.position = "absolute";
     //var t = document.createTextNode("hi" + i);
