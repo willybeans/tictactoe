@@ -11,16 +11,60 @@
   background: pink;
   border:1px solid black;
 }
+.reset{
+
+}
+.board-container{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+}
+.game-container {
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  top: 10%;
+  left: 5%;
+  font-size: 4em;
+  text-align: center;
+}
+
+.menu-container{
+  display: none;
+}
+.players-menu{
+  display: none;
+}
+.shape-menu{
+  display: none;
+}
 </style>
 </head>
 
 
 <body>
 <div class="wrapper">
-  <div class="container">
-
-
-
+  <div class="reset">RESET</div>
+  <div class="board-container">
+    <div class="game-container"></div>
+  </div>
+  <div class="menu-container">
+    <div class="players-menu">
+      <p>What shape would player 1 like to play as?</p>
+      <button></button>
+    </div>
+    <div class="shape-menu" id="2p">
+      <p>What will player 1 be?</p>
+      <button></button>
+      <button></button>
+    </div>
+    <div class="shape-menu" id="1p">
+      <p>What would you like to play as?</p>
+      <button></button>
+      <button></button>
+    </div>
   </div>
 </div>
 
